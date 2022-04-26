@@ -1,0 +1,239 @@
+/* Nicko Goodwin 12/1/2021 */
+
+/* 
+Color Pallette
+Light Gray: #212529
+Light Black: #121212
+Dark Blue: #264653
+Light Blue: #0096c7
+Yellow: #e9c46a
+Light Orange: #f4a261
+Dark Orange: #e76f51
+*/
+
+body {
+	position: relative;
+	background-color: #121212;
+	color: white;
+	font-family: 'Open Sans', Arial, sans-serif;
+	min-width: 320px;
+}
+
+/* MOBILE STYLING */
+
+/* Navbar Styling */
+.navbar {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.mobileNavLink {
+	display: block;
+}
+
+.tabletNavLink {
+	display: none;
+}
+
+#navbarResponsive {
+	background-color: #343a40;
+}
+
+.navbar-brand img {
+	height: 50%;
+	width: 50%;
+}
+
+.nav-link {
+	font-size: 1.25em;
+}
+
+.nav-link:hover {
+	color: #0096c7 !important;
+}
+
+.socialIcons {
+	display: none;
+}
+
+/* TABLET+ Styling */
+@media (min-width: 768px) {
+	/* Animations */
+	@keyframes iconEntrance {
+		from {
+			transform: translateY(150vh);
+		}
+		to {
+			transform: translateY(0vh);
+		}
+	}
+
+	@keyframes socialEntrance {
+		0% {
+			transform: translateY(40%);
+		}
+		25% {
+			transform: translateY(35%);
+		}
+		50% {
+			transform: translateY(30%);
+		}
+		75% {
+			transform: translateY(35%);
+		}
+		100% {
+			transform: translateY(40%);
+		}
+	}
+
+	/* Responsive Sidebar Display */
+	#navbarResponsive {
+		background-color: inherit;
+	}
+
+	.mobileNavLink {
+		display: none !important;
+	}
+
+	.tabletNavLink {
+		display: block !important;
+	}
+
+	.navbar-brand img {
+		height: 100%;
+		width: 100%;
+	}
+
+	#sidebar {
+		width: 200px;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	/* Header Styling */
+	header,
+	main {
+		margin-left: 200px;
+	}
+
+	.nav-link {
+		display: block;
+		font-size: 2.5em;
+		border-radius: 50%;
+		background-color: #343a40;
+		transition: all ease-in-out 250ms;
+		margin: 0.5em 0;
+		padding-left: 0.5em !important;
+		padding-right: 0.5em !important;
+		animation: iconEntrance 500ms ease-in-out;
+	}
+
+	.nav-link:hover {
+		box-shadow: none;
+		border-radius: 25%;
+	}
+
+	.nav-link i {
+		padding: 0;
+		color: white;
+	}
+
+	/* Individual nav-link Styling */
+	#navLinkHome {
+		box-shadow: 0 0 10px #0096c7;
+	}
+
+	#navLinkHome:hover {
+		box-shadow: none;
+		background-color: #0096c7;
+	}
+
+	#navLinkAbout {
+		box-shadow: 0 0 10px #e9c46a;
+	}
+
+	#navLinkAbout:hover {
+		box-shadow: none;
+		background-color: #e9c46a;
+	}
+
+	#navLinkExperience {
+		box-shadow: 0 0 10px #e76f51;
+	}
+
+	#navLinkExperience:hover {
+		box-shadow: none;
+		background-color: #e76f51;
+	}
+
+	#navLinkContact {
+		box-shadow: 0 0 10px #f4a261;
+	}
+
+	#navLinkContact:hover {
+		box-shadow: none;
+		background-color: #f4a261;
+	}
+
+	/* Social "Footer" styling */
+	.socialIcons {
+		display: block;
+		position: absolute;
+		justify-content: space-evenly;
+		bottom: 0;
+		padding: 0.5em;
+		border-radius: 15% 15% 0 0;
+		box-shadow: 0 0 10px #121212;
+		background-color: #343a40;
+		transform: translateY(40%);
+		transition: transform ease-in-out 200ms;
+		animation: socialEntrance 500ms 1s ease-in-out;
+	}
+
+	.socialIcons i {
+		font-size: 1.5em;
+	}
+
+	.socialIcons:hover {
+		transform: translateY(0%);
+	}
+
+	.socialIcons a {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	#phone {
+		color: darkgreen;
+	}
+
+	#phone:hover {
+		color: seagreen;
+	}
+
+	#email {
+		color: lightgray;
+	}
+
+	#email:hover {
+		color: white;
+	}
+
+	#github {
+		color: #8c3fc0;
+	}
+
+	#github:hover {
+		color: #b34afa;
+	}
+
+	#linkedin {
+		color: #0e76a8;
+	}
+
+	#linkedin:hover {
+		color: #15b3fc;
+	}
+}

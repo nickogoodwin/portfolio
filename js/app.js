@@ -63,7 +63,8 @@ const validateForm = () => {
 };
 
 $(document).ready(() => {
-	$(document).mousemove(displayStats);
+	// $(document).mousemove(displayStats);
+	AOS.init();
 
 	$('#submit-button').click(validateForm);
 
